@@ -39,8 +39,8 @@ export default function Home() {
               Discover Festivals & Events Worldwide with Felizey!
             </h1>
             <p className="mt-4 text-lg md:text-xl text-[#000000]">
-              "Never miss out on amazing festivals and events again. Connect
-              with fellow explorers and make unforgettable memories."
+              Never miss out on amazing festivals and events again. Connect
+              with fellow explorers and make unforgettable memories.
             </p>
             {/* <button className="mt-6 px-8 py-3 bg-white text-[#FFA500] text-lg font-semibold rounded-md shadow-md">
               Get Started
