@@ -38,8 +38,8 @@ export default function Home() {
               Discover Festivals & Events Worldwide with Felizey!
             </h1>
             <p className="mt-4 text-lg md:text-xl text-[#000000]">
-              Never miss out on amazing festivals and events again. Connect
-              with fellow explorers and make unforgettable memories.
+              Never miss out on amazing festivals and events again. Connect with
+              fellow explorers and make unforgettable memories.
             </p>
             {/* <button className="mt-6 px-8 py-3 bg-white text-[#FFA500] text-lg font-semibold rounded-md shadow-md">
               Get Started
@@ -58,6 +58,56 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Footer Section */}
+      <footer className="bg-[#34A193] text-white py-6">
+        <div className="container mx-auto text-center">
+          <p className="text-lg">
+            &copy; {new Date().getFullYear()} Felizey. All rights reserved.
+          </p>
+          <div className="mt-4 flex justify-center space-x-6">
+            <a href="#about" className="hover:underline">
+              About
+            </a>
+            <a href="#contact" className="hover:underline">
+              Contact
+            </a>
+            <a href="#privacy" className="hover:underline">
+              Privacy Policy
+            </a>
+          </div>
+          <div className="mt-4 flex justify-center space-x-6">
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fab fa-facebook-f text-2xl"></i>
+            </a>
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fab fa-twitter text-2xl"></i>
+            </a>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fab fa-instagram text-2xl"></i>
+            </a>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fab fa-linkedin-in text-2xl"></i>
+            </a>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
