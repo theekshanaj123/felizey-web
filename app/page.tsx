@@ -1,7 +1,6 @@
 import Image from "next/image";
 
 export default function Home() {
-  
   return (
     <div className="overflow-hidden">
       {/* Navbar */}
@@ -54,7 +53,7 @@ export default function Home() {
               alt="iPhone Mockup"
               width={3300}
               height={3600}
-              className="object-contain top-10 absolutely positioned w-100"
+              className="object-contain"
             />
           </div>
         </div>
