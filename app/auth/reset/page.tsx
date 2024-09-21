@@ -7,8 +7,10 @@ export default function ResetPassword() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const handlePasswordReset = async () => {
+  const handlePasswordReset = async (e: { preventDefault: () => void; }) => {
+    e.preventDefault();
     const { error } = await supabase.auth.resetPasswordForEmail(email, {
+      // redirectTo: "http://localhost:3000/auth/update",
       redirectTo: `${process.env.NEXT_PUBLIC_BASE_URL}/auth/update`,
     });
 
