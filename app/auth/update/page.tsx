@@ -12,8 +12,6 @@ export default function UpdatePassword() {
   const router = useRouter(); // Update to the new hook
 
   const handlePasswordUpdate = async () => {
-    
-
     const { error } = await supabase.auth.updateUser({
       password: newPassword,
     });
