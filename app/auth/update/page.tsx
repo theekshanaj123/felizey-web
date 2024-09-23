@@ -57,8 +57,8 @@ export default function UpdatePassword() {
       setMessage("Error updating password");
     } else {
       setMessage("Password updated successfully!");
-      // router.push("/"); // Use router.push from next/navigation
-      window.location.href = "exp://192.168.8.100:8081/login";
+      router.push("/"); // Use router.push from next/navigation
+      // window.location.href = "exp://192.168.8.100:8081/login";
     }
   };
 
