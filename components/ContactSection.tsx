@@ -2,12 +2,12 @@ import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaFacebook, FaTwitter, FaInstagram
 
 const ContactSection: React.FC = () => {
   return (
-    <section className="py-12 bg-[#FAF8FB] flex items-center">
+    <section id="contact" className="py-12 bg-[#FAF8FB] flex items-center max-w-screen-xl mx-auto">
       <div className="container mx-auto px-6 md:px-12 lg:px-16">
         <h2 className="text-2xl md:text-3xl font-bold text-darkPurple text-center mb-8">
           Contact Us
         </h2>
-        
+
         <div className="flex flex-col md:flex-row justify-between items-center md:items-start text-center md:text-left space-y-8 md:space-y-0">
           {/* Contact Info */}
           <div className="md:w-1/3 space-y-4">
@@ -15,12 +15,12 @@ const ContactSection: React.FC = () => {
               <FaPhone className="text-[#BB17A2] text-2xl mr-2" />
               <p className="text-lg text-mediamGray">+1 (555) 123-4567</p>
             </div>
-            
+
             <div className="flex items-center justify-center md:justify-start">
               <FaEnvelope className="text-[#BB17A2] text-2xl mr-2" />
               <p className="text-lg text-mediamGray">info@felizey.com</p>
             </div>
-            
+
             <div className="flex items-center justify-center md:justify-start">
               <FaMapMarkerAlt className="text-[#BB17A2] text-2xl mr-2" />
               <p className="text-lg text-mediamGray">123 Event Ave, City, Country</p>
@@ -59,11 +59,11 @@ const ContactSection: React.FC = () => {
               />
               <textarea
                 placeholder="Your Message"
+                className="w-full p-3 rounded-lg border border-lightGray focus:outline-none focus:border-[#BB17A2] resize-none"
                 rows={4}
-                className="w-full p-3 rounded-lg border border-lightGray focus:outline-none focus:border-[#BB17A2]"
-              ></textarea>
-              <button type="submit" className="w-full py-3 bg-[#BB17A2] text-white font-semibold rounded-lg hover:bg-[#9A137D] transition duration-200">
-                Submit
+              />
+              <button type="submit" className="w-full py-3 px-6 bg-[#BB17A2] text-white rounded-lg hover:bg-[#9c1580] transition duration-300">
+                Send Message
               </button>
             </form>
           </div>

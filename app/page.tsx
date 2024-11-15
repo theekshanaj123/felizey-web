@@ -1,8 +1,10 @@
-import Navbar from "../components/Navbar";
-import HeroSection from "../components/HeroSection";
-import FeatureSection from "../components/FeatureSection";
-import FeatureSectionReverse from "../components/FeatureSectionReverse";
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import FeatureSection from "@/components/FeatureSection";
+import FeatureSectionReverse from "@/components/FeatureSectionReverse";
 import ContactSection from "@/components/ContactSection";
+import AboutUs from "@/components/AboutUs";
+import Footer from "@/components/Footer";
 
 const Home: React.FC = () => {
   return (
@@ -19,17 +21,15 @@ const Home: React.FC = () => {
       {/* Feature Section */}
       <FeatureSectionReverse />
 
+      {/* AboutUs Section */}
+      <AboutUs />
+
       {/* Contact Section */}
       <ContactSection />
 
       {/* Footer Section */}
-      <footer className="bg-[#34A193] text-white py-6">
-        <div className="container mx-auto text-center">
-          <p className="text-lg">
-            &copy; {new Date().getFullYear()} Felizey. All rights reserved.
-          </p>
-        </div>
-      </footer>
+      <Footer />
+      
     </div>
   );
 };
