@@ -1,4 +1,11 @@
 import React from 'react';
+import { Anton } from 'next/font/google';
+
+const anton = Anton({
+  subsets: ['latin'],
+  weight: '400',
+});
+
 
 const HeroSection: React.FC = () => {
   return (
@@ -8,7 +15,7 @@ const HeroSection: React.FC = () => {
     >
       {/* Main Heading */}
       <h1
-        className="text-white text-[96px] font-anton leading-[0.99] tracking-[1.76px] capitalize"
+        className={`${anton.className} text-white text-[96px] font-normal leading-[0.99] tracking-[5.76px] capitalize`}
         style={{ maxWidth: '1045px', flexShrink: 0 }}
       >
         Discover Festivals & Events Worldwide with Felizey!
