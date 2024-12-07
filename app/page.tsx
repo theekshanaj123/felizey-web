@@ -3,7 +3,6 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import FeatureSection1 from "@/components/FeatureSection1"; // Import FeatureSection1
 import FeatureSection2 from "@/components/FeatureSection2"; // Import FeatureSection2
-import FeatureSection3 from "@/components/FeatureSection3"; // Import FeatureSection3
 
 export default function Home() {
   return (

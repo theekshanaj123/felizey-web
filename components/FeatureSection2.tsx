@@ -77,7 +77,7 @@ const FeatureSection2: React.FC = () => {
         {/* Left Part - 1/3 Width */}
         <div className="w-1/3 h-full relative flex justify-end">
           <img
-            src="/assets/Device13PMF.png"
+            src="/assets/Device13PMS.png"
             alt="iPhone"
             className="absolute bottom-0 right-0 w-auto h-auto max-h-full"
           />
