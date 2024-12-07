@@ -31,7 +31,7 @@ const HeroSection: React.FC = () => {
           className="w-[238px] h-[64px] bg-[#BB17A2] text-white text-[24px] font-inter font-bold capitalize text-center rounded-[20px]"
           style={{ flexShrink: 0 }}
         >
-          Start Here >>
+          Start Here &gt &gt
         </button>
       </div>
     </section>
