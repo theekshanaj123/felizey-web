@@ -2,9 +2,9 @@ import React from 'react';
 
 const Navbar: React.FC = () => {
   return (
-    <nav className="flex items-center justify-between h-[94px] px-[88px] bg-[#161221]">
+    <nav className="flex items-center justify-between px-4 py-2 bg-transparent">
       {/* Logo */}
-      <div className="w-[48px] h-[50.595px] flex-shrink-0">
+      <div className="w-12 h-12 flex-shrink-0">
         <img
           src="../assets/felizeylogo.png" 
           alt="Logo"
@@ -12,45 +12,45 @@ const Navbar: React.FC = () => {
         />
       </div>
 
-      {/* Links (Center horizontally) */}
-      <div className="flex items-center justify-center flex-grow gap-[30px] h-[24px] hidden md:flex">
+      {/* Links */}
+      <div className="hidden md:flex items-center gap-6">
         <a
           href="#start-here"
-          className="text-[#FAF8FB] text-[20px] font-bold leading-none capitalize text-center"
+          className="text-[#FAF8FB] text-lg font-bold capitalize"
         >
           Start here
         </a>
         <a
           href="#backstage"
-          className="text-[#FAF8FB] text-[20px] font-bold leading-none capitalize text-center"
+          className="text-[#FAF8FB] text-lg font-bold capitalize"
         >
           Backstage
         </a>
         <a
           href="#say-hello"
-          className="text-[#FAF8FB] text-[20px] font-bold leading-none capitalize text-center"
+          className="text-[#FAF8FB] text-lg font-bold capitalize"
         >
           Say hello
         </a>
         <a
           href="#how-it-works"
-          className="text-[#FAF8FB] text-[20px] font-bold leading-none capitalize text-center"
+          className="text-[#FAF8FB] text-lg font-bold capitalize"
         >
           How it works
         </a>
       </div>
 
       {/* Hamburger Menu (Mobile view) */}
-      <div className="md:hidden flex items-center">
-        <button className="text-[#FAF8FB] text-[24px]">
+      <div className="md:hidden">
+        <button className="text-[#FAF8FB] text-2xl">
           &#9776; {/* Hamburger icon */}
         </button>
       </div>
 
       {/* Download Button */}
-      <div className="w-[193px] h-[50px] flex-shrink-0">
+      <div>
         <button
-          className="w-full h-full bg-[#BB17A2] text-[#FAF8FB] text-[20px] font-bold capitalize text-center rounded-[20px]" // updated border-radius
+          className="px-4 py-2 bg-[#BB17A2] text-[#FAF8FB] text-lg font-bold rounded-lg"
         >
           Download now
         </button>

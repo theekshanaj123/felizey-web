@@ -6,13 +6,9 @@ const anton = Anton({
   weight: '400',
 });
 
-
 const HeroSection: React.FC = () => {
   return (
-    <section
-      className="flex flex-col items-start justify-center bg-cover bg-center text-left min-h-[600px]"
-      style={{ backgroundImage: "url('/path-to-background-image.jpg')" }}
-    >
+    <section className="flex flex-col items-start justify-center text-left min-h-[600px]">
       {/* Main Heading */}
       <h1
         className={`${anton.className} text-white text-[96px] font-normal leading-[0.99] tracking-[5.76px] capitalize`}
