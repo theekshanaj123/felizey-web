@@ -2,10 +2,12 @@ import React from "react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import FeatureSection1 from "@/components/FeatureSection1"; // Import FeatureSection1
+import FeatureSection2 from "@/components/FeatureSection2"; // Import FeatureSection2
 
 export default function Home() {
   return (
     <div className="min-h-screen">
+      {/* Hero Section Background and Styling */}
       <div
         className="max-w-screen-xl mx-auto px-6"
         style={{
@@ -27,8 +29,16 @@ export default function Home() {
         </main>
       </div>
 
-      {/* Feature Section */}
+      {/* Feature Section 1 */}
       <FeatureSection1 />
+
+      {/* Feature Section 2 */}
+      <FeatureSection2 />
+
+      <h1 className="font-anton text-white text-center text-[64px] font-normal capitalize pt-40 pb-6">
+        Let’s Bring{" "}
+        <span className="text-[#BB17A2]">Your Festival to Life!</span>
+      </h1>
     </div>
   );
 }

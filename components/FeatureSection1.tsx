@@ -1,5 +1,12 @@
 import React from "react";
 import Image from "next/image";
+import { Anton } from 'next/font/google';
+
+const anton = Anton({
+  subsets: ['latin'],
+  weight: '400',
+});
+
 
 const FeatureSection1: React.FC = () => {
   return (
@@ -23,7 +30,7 @@ const FeatureSection1: React.FC = () => {
           <button
             style={{
               color: "#BB17A2",
-              fontFamily: "Anton, sans-serif",
+              fontFamily: anton.style.fontFamily,
               fontSize: "44px",
               textTransform: "capitalize",
               background: "transparent",
@@ -38,24 +45,19 @@ const FeatureSection1: React.FC = () => {
         {/* Layout for screenshot and text sections */}
         <div className="flex flex-row justify-between items-center space-x-6 w-full">
           {/* Mobile Screenshot Image */}
-          <div
-            style={{
-              width: "251.42px",
-              height: "507.031px",
-              transform: "rotate(-11.124deg)",
-            }}
-          >
+          <div>
             <Image
-              src="/assets/screenshot.png"
+              src="/assets/Device13PM.png"
               alt="Mobile showing the Felizey app"
-              width={251}
-              height={507}
+              layout="intrinsic"
+              width={350}
+              height={200}
               className="object-contain"
             />
           </div>
 
           {/* Text Section */}
-          <div className="flex flex-col items-center text-center space-y-6 text-white">
+          <div className="flex flex-col items-end text-right space-y-6 text-white">
             {/* Description Text */}
             <p
               style={{
@@ -75,7 +77,7 @@ const FeatureSection1: React.FC = () => {
             </p>
 
             {/* App Download Buttons */}
-            <div className="flex gap-6 justify-center items-center">
+            <div className="flex gap-6 justify-end items-center">
               {/* Google Play Button */}
               <a
                 href="#"
