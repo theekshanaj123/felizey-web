@@ -1,5 +1,12 @@
 import React from "react";
 import Image from "next/image";
+import { Anton } from 'next/font/google';
+
+const anton = Anton({
+  subsets: ['latin'],
+  weight: '400',
+});
+
 
 const FeatureSection1: React.FC = () => {
   return (
@@ -23,7 +30,7 @@ const FeatureSection1: React.FC = () => {
           <button
             style={{
               color: "#BB17A2",
-              fontFamily: "Anton, sans-serif",
+              fontFamily: anton.style.fontFamily,
               fontSize: "44px",
               textTransform: "capitalize",
               background: "transparent",

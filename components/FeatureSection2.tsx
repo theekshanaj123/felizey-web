@@ -1,10 +1,18 @@
 import React from "react";
+import { Anton } from "next/font/google";
+
+const anton = Anton({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 const FeatureSection2: React.FC = () => {
   return (
     <section className="flex flex-col gap-6 items-center">
       {/* Section Title */}
-      <div className="font-anton text-center text-[3.5rem] text-[#BB17A2] capitalize">
+      <div
+        className={`${anton.className} text-center text-[3.5rem] text-[#BB17A2] capitalize`}
+      >
         How it works :)
       </div>
 
@@ -12,7 +20,9 @@ const FeatureSection2: React.FC = () => {
       <div className="w-[1004px] h-[450px] flex flex-row flex-shrink-0 rounded-[20px] bg-white relative overflow-hidden">
         {/* Left Part - 2/3 Width */}
         <div className="w-2/3 h-full p-6 flex flex-col justify-center">
-          <h2 className="font-anton text-black text-[70px] leading-[84px] capitalize">
+          <h2
+            className={`${anton.className} text-black text-[70px] leading-[84px] capitalize`}
+          >
             Easily Organize Your Event
           </h2>
           <p className="mt-4 font-inter text-black text-[16px] leading-[19.2px] font-semibold capitalize max-w-[529px]">
@@ -43,7 +53,7 @@ const FeatureSection2: React.FC = () => {
           style={{ background: "#E50AE0" }}
         >
           {/* Header */}
-          <h2 className="font-anton text-[#FFF8F8] text-[48px] font-normal leading-[57.6px] capitalize">
+          <h2 className={`${anton.className} text-[#FFF8F8] text-[48px] font-normal leading-[57.6px] capitalize`}>
             Reach a Community of Festival Lovers
           </h2>
 
@@ -66,7 +76,7 @@ const FeatureSection2: React.FC = () => {
           }}
         >
           {/* Header */}
-          <h2 className="font-anton text-[#BB17A2] text-[40px] font-normal leading-[48px] capitalize p-6">
+          <h2 className={`${anton.className} text-[#BB17A2] text-[40px] font-normal leading-[48px] capitalize p-6`}>
             Build Buzz and Community Before the Event
           </h2>
         </div>
@@ -86,7 +96,7 @@ const FeatureSection2: React.FC = () => {
         {/* Right Part - 2/3 Width */}
         <div className="w-2/3 h-full p-6 flex flex-col justify-center items-end">
           {/* Header */}
-          <h2 className="font-anton text-white text-[70px] leading-[84px] capitalize text-right">
+          <h2 className={`${anton.className} text-white text-[70px] leading-[84px] capitalize text-right`}>
             Easily Organize Your Event
           </h2>
 
