@@ -1,12 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import { Anton } from 'next/font/google';
+import { Anton } from "next/font/google";
 
 const anton = Anton({
-  subsets: ['latin'],
-  weight: '400',
+  subsets: ["latin"],
+  weight: "400",
 });
-
 
 const FeatureSection1: React.FC = () => {
   return (
@@ -69,11 +68,10 @@ const FeatureSection1: React.FC = () => {
                 letterSpacing: "1.44px",
               }}
             >
-              "Get{" "}
-              <span style={{ color: "#BB17A2" }}>
-                Felizey
-              </span>{" "}
-              on your device and unlock a world of festivals and exclusive events! Download now to explore, connect, and experience unforgettable moments, all in one app."
+              &quot;Get <span style={{ color: "#BB17A2" }}>Felizey</span> on
+              your device and unlock a world of festivals and exclusive events!
+              Download now to explore, connect, and experience unforgettable
+              moments, all in one app.&quot;
             </p>
 
             {/* App Download Buttons */}
