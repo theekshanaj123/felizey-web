@@ -1,113 +1,34 @@
-import Image from "next/image";
+import React from "react";
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import FeatureSection1 from "@/components/FeatureSection1"; // Import FeatureSection1
 
 export default function Home() {
   return (
-    <div className="overflow-hidden">
-      {/* Navbar */}
-      <nav className="bg-[#F8F8FF] shadow-md p-4">
-        <div className="container mx-auto flex justify-between items-center">
-          <div className="text-5xl font-bold text-[#34A193]">Felizey</div>
-        </div>
-      </nav>
+    <div className="min-h-screen">
+      <div
+        className="max-w-screen-xl mx-auto px-6"
+        style={{
+          backgroundImage:
+            "url('../assets/Herobg.jpg'), linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #161221 100%)", // Gradient fading to #161221
+          backgroundPosition: "bottom", // Ensures the image is aligned to the bottom of the div
+          backgroundSize: "cover", // Ensures the image covers the div
+          backgroundRepeat: "no-repeat", // Prevents repeating of the image
+        }}
+      >
+        {/* Navbar */}
+        <Navbar />
 
-      {/* Hero Section */}
-      <section className="overflow-hidden relative h-screen bg-[#F8F8FF] flex items-center">
-        {/* Green SVG Background */}
-        <div className="absolute inset-0 overflow-hidden">
-          <svg
-            className="w-full h-full"
-            viewBox="300 -100 100 200"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle
-              cx="200"
-              cy="400"
-              r="400"
-              fill="#FFA500"
-              className="blur-2xl"
-            />
-          </svg>
-        </div>
+        {/* Hero Section */}
+        <main>
+          <div className="max-w-screen-lg mx-auto px-6">
+            <HeroSection />
+          </div>
+        </main>
+      </div>
 
-        {/* Content */}
-        <div className="relative container mx-auto px-6 flex flex-col md:flex-row items-center">
-          {/* Left side */}
-          <div className="w-full md:w-1/2">
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight text-gray-900">
-              Discover Festivals & Events Worldwide with Felizey!
-            </h1>
-            <p className="mt-4 text-lg md:text-xl text-[#000000]">
-              Never miss out on amazing festivals and events again. Connect with
-              fellow explorers and make unforgettable memories.
-            </p>
-            {/* <button className="mt-6 px-8 py-3 bg-white text-[#FFA500] text-lg font-semibold rounded-md shadow-md">
-              Get Started
-            </button> */}
-          </div>
-
-          {/* Right side - iPhone Mockup Image */}
-          <div className="w-full md:w-1/2 mt-10 md:mt-0 flex justify-center">
-            <Image
-              src="https://knjxysvpnobgllbfvtrj.supabase.co/storage/v1/object/public/web/iPhone%2014%20Pro%20Mockup%20Free%20PSD.png"
-              alt="iPhone Mockup"
-              width={3300}
-              height={3600}
-              className="object-contain"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Footer Section */}
-      <footer className="bg-[#34A193] text-white py-6">
-        <div className="container mx-auto text-center">
-          <p className="text-lg">
-            &copy; {new Date().getFullYear()} Felizey. All rights reserved.
-          </p>
-          <div className="mt-4 flex justify-center space-x-6">
-            <a href="#about" className="hover:underline">
-              About
-            </a>
-            <a href="#contact" className="hover:underline">
-              Contact
-            </a>
-            <a href="#privacy" className="hover:underline">
-              Privacy Policy
-            </a>
-          </div>
-          <div className="mt-4 flex justify-center space-x-6">
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-facebook-f text-2xl"></i>
-            </a>
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-twitter text-2xl"></i>
-            </a>
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-instagram text-2xl"></i>
-            </a>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-linkedin-in text-2xl"></i>
-            </a>
-          </div>
-        </div>
-      </footer>
+      {/* Feature Section */}
+      <FeatureSection1 />
     </div>
   );
 }
