@@ -31,7 +31,7 @@ export default function Home() {
       <FeatureSection1 />
 
       {/* Feature Section 2 */}
-      {/* <FeatureSection2 /> */}
+      <FeatureSection2 />
 
       {/* Festival Heading Section */}
       <FestivalHeading />
