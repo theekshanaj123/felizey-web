@@ -11,9 +11,6 @@ const Footer: React.FC = () => {
             <div className="w-10 h-10 bg-[#BB17A2] rounded-full"></div>
             <h1 className="text-[#D9D9D9] font-bold text-xl">Felizey</h1>
           </div>
-          <p className="text-[#5B5B5B] font-light text-sm">
-            Your gateway to unforgettable festival experiences.
-          </p>
         </div>
 
         {/* Navigation Links */}
