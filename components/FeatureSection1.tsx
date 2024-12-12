@@ -12,7 +12,7 @@ const FeatureSection1: React.FC = () => {
     <section className="bg-[#161221] py-16 px-6 flex justify-center items-center min-h-screen">
       <div className="max-w-screen-xl mx-auto flex flex-col items-center space-y-12">
         {/* Top Section with 'Your Next Festival Adventure' and 'Start Here >>' in one line */}
-        <div className="flex items-center space-x-6 text-center">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-6 text-center sm:text-left">
           {/* 'Your Next Festival Adventure' Heading */}
           <h2
             style={{
@@ -21,6 +21,7 @@ const FeatureSection1: React.FC = () => {
               fontSize: "32px",
               fontWeight: 400,
             }}
+            className="sm:text-4xl text-2xl"
           >
             Your Next Festival Adventure
           </h2>
@@ -36,15 +37,16 @@ const FeatureSection1: React.FC = () => {
               border: "none",
               cursor: "pointer",
             }}
+            className="sm:text-4xl text-2xl mt-4 sm:mt-0"
           >
             Start Here &gt;&gt;
           </button>
         </div>
 
         {/* Layout for screenshot and text sections */}
-        <div className="flex flex-row justify-between items-center space-x-6 w-full">
-          {/* Mobile Screenshot Image */}
-          <div>
+        <div className="flex flex-col sm:flex-row sm:justify-between items-center sm:space-x-6 w-full">
+          {/* Screenshot Image */}
+          <div className="flex-shrink-0 mb-8 sm:mb-0">
             <Image
               src="/assets/Device13PM.png"
               alt="Mobile showing the Felizey app"
@@ -56,7 +58,7 @@ const FeatureSection1: React.FC = () => {
           </div>
 
           {/* Text Section */}
-          <div className="flex flex-col items-end text-right space-y-6 text-white">
+          <div className="flex flex-col items-center sm:items-end text-right space-y-6 text-white">
             {/* Description Text */}
             <p
               style={{
@@ -67,6 +69,7 @@ const FeatureSection1: React.FC = () => {
                 lineHeight: "1.6",
                 letterSpacing: "1.44px",
               }}
+              className="text-center sm:text-right text-sm"
             >
               &quot;Get <span style={{ color: "#BB17A2" }}>Felizey</span> on
               your device and unlock a world of festivals and exclusive events!
@@ -75,14 +78,14 @@ const FeatureSection1: React.FC = () => {
             </p>
 
             {/* App Download Buttons */}
-            <div className="flex gap-6 justify-end items-center">
+            <div className="flex flex-row gap-6 justify-center sm:justify-end items-center sm:items-center">
               {/* Google Play Button */}
               <a
                 href="#"
                 style={{
                   display: "inline-block",
-                  width: "255px",
-                  height: "76px",
+                  width: "180px", // Adjusted width for mobile
+                  height: "56px", // Adjusted height for mobile
                   backgroundImage: `url(/assets/googleplay.png)`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
@@ -95,8 +98,8 @@ const FeatureSection1: React.FC = () => {
                 href="#"
                 style={{
                   display: "inline-block",
-                  width: "216px",
-                  height: "68px",
+                  width: "160px", // Adjusted width for mobile
+                  height: "48px", // Adjusted height for mobile
                   backgroundImage: `url(/assets/appleappstore.png)`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
