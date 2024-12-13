@@ -3,6 +3,8 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import FeatureSection1 from "@/components/FeatureSection1"; // Import FeatureSection1
 import FeatureSection2 from "@/components/FeatureSection2"; // Import FeatureSection2
+import Footer from "@/components/Footer";
+import FestivalHeading from "@/components/FestivalHeading"; // Import FestivalHeading
 
 export default function Home() {
   return (
@@ -11,22 +13,18 @@ export default function Home() {
       <div
         className="max-w-screen-xl mx-auto px-6"
         style={{
-          backgroundImage:
-            "url('../assets/Herobg.jpg'), linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #161221 100%)", // Gradient fading to #161221
-          backgroundPosition: "bottom", // Ensures the image is aligned to the bottom of the div
-          backgroundSize: "cover", // Ensures the image covers the div
-          backgroundRepeat: "no-repeat", // Prevents repeating of the image
+          backgroundImage: `
+            linear-gradient(to bottom, rgba(22, 18, 33, 0.1), #161221), 
+            linear-gradient(to right, #161221, rgba(22, 18, 33, 0.3) 20%, rgba(22, 18, 33, 0.3) 80%, #161221), 
+            url('/assets/Herobg.jpg')
+          `,
+          backgroundPosition: "center bottom",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
         }}
       >
-        {/* Navbar */}
         <Navbar />
-
-        {/* Hero Section */}
-        <main>
-          <div className="max-w-screen-lg mx-auto px-6">
-            <HeroSection />
-          </div>
-        </main>
+        <HeroSection />
       </div>
 
       {/* Feature Section 1 */}
@@ -35,10 +33,11 @@ export default function Home() {
       {/* Feature Section 2 */}
       <FeatureSection2 />
 
-      <h1 className="font-anton text-white text-center text-[64px] font-normal capitalize pt-40 pb-6">
-        Let’s Bring{" "}
-        <span className="text-[#BB17A2]">Your Festival to Life!</span>
-      </h1>
+      {/* Festival Heading Section */}
+      <FestivalHeading />
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }
