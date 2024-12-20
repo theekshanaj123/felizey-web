@@ -8,11 +8,9 @@ const PrivacyPolicy: React.FC = () => {
           Privacy Policy for Felizey
         </h1>
         <p className="text-sm text-[#5B5B5B] mb-4">Last Updated: 20/12/2024</p>
-
         <p className="text-lg leading-7 mb-8">
           At Felizey, we value your trust and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, and safeguard your data when you use the Felizey application.
         </p>
-
         <h2 className="text-2xl font-semibold mt-8 mb-6">1. Information We Collect</h2>
         <h3 className="text-xl font-semibold mb-4">1.1 Personal Data</h3>
         <ul className="list-disc pl-5 mb-6">
