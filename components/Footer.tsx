@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
             Contact
           </a>
           <a
-            href="#privacy"
+            href="/privacy-policy"
             className="text-[#D9D9D9] hover:text-[#BB17A2] transition duration-200"
           >
             Privacy Policy
