@@ -2,7 +2,12 @@
 
 import React, { useState } from "react";
 
-const Navbar: React.FC = () => {
+interface NavbarProps {
+  onStartHereClick: () => void;
+  onHowItWorksClick: () => void;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ onStartHereClick, onHowItWorksClick }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -18,20 +23,20 @@ const Navbar: React.FC = () => {
 
       {/* Links (Desktop View) */}
       <div className="hidden md:flex items-center gap-6">
-        <a
-          href="#start-here"
+        <button
+          onClick={onStartHereClick}
           className="group text-[#FAF8FB] text-lg font-bold capitalize relative"
         >
           Start here
           <span className="absolute inset-x-0 bottom-0 h-[3px] bg-[#BB17A2] scale-x-0 group-hover:scale-x-100 transition-all"></span>
-        </a>
-        <a
-          href="#how-it-works"
+        </button>
+        <button
+          onClick={onHowItWorksClick}
           className="group text-[#FAF8FB] text-lg font-bold capitalize relative"
         >
           How it works
           <span className="absolute inset-x-0 bottom-0 h-[3px] bg-[#BB17A2] scale-x-0 group-hover:scale-x-100 transition-all"></span>
-        </a>
+        </button>
         <a
           href="#backstage"
           className="group text-[#FAF8FB] text-lg font-bold capitalize relative"
@@ -50,34 +55,34 @@ const Navbar: React.FC = () => {
 
       {/* Hamburger Menu (Mobile View) */}
       <div className="md:hidden relative z-20">
-  <button
-    className="text-[#FAF8FB] text-2xl"
-    onClick={() => setMenuOpen(!menuOpen)}
-    aria-label="Toggle Menu"
-  >
-    {menuOpen ? "✖" : "☰"}
-  </button>
-</div>
+        <button
+          className="text-[#FAF8FB] text-2xl"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle Menu"
+        >
+          {menuOpen ? "✖" : "☰"}
+        </button>
+      </div>
 
-{menuOpen && (
-  <div className="absolute top-full left-0 w-full bg-[#161221] text-[#FAF8FB] flex flex-col items-center gap-4 py-6 md:hidden z-10">
-    <a href="#start-here" className="text-lg font-bold capitalize">
-      Start here
-    </a>
-    <a href="#how-it-works" className="text-lg font-bold capitalize">
-      How it works
-    </a>
-    <a href="#backstage" className="text-lg font-bold capitalize">
-      Backstage
-    </a>
-    <a href="#say-hello" className="text-lg font-bold capitalize">
-      Say hello
-    </a>
-    <button className="px-4 py-2 bg-[#BB17A2] text-[#FAF8FB] text-lg font-bold rounded-lg mt-4">
-      Download now
-    </button>
-  </div>
-)}
+      {menuOpen && (
+        <div className="absolute top-full left-0 w-full bg-[#161221] text-[#FAF8FB] flex flex-col items-center gap-4 py-6 md:hidden z-10">
+          <button onClick={onStartHereClick} className="text-lg font-bold capitalize">
+            Start here
+          </button>
+          <button onClick={onHowItWorksClick} className="text-lg font-bold capitalize">
+            How it works
+          </button>
+          <a href="#backstage" className="text-lg font-bold capitalize">
+            Backstage
+          </a>
+          <a href="#say-hello" className="text-lg font-bold capitalize">
+            Say hello
+          </a>
+          <button className="px-4 py-2 bg-[#BB17A2] text-[#FAF8FB] text-lg font-bold rounded-lg mt-4">
+            Download now
+          </button>
+        </div>
+      )}
 
       {/* Download Button */}
       <div className="hidden md:block">

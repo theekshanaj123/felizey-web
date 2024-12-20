@@ -1,15 +1,27 @@
-import React from "react";
+"use client";
+
+import React, { useRef } from "react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import FeatureSection1 from "@/components/FeatureSection1"; // Import FeatureSection1
-import FeatureSection2 from "@/components/FeatureSection2"; // Import FeatureSection2
+import FeatureSection1 from "@/components/FeatureSection1";
+import FeatureSection2 from "@/components/FeatureSection2";
 import Footer from "@/components/Footer";
-import FestivalHeading from "@/components/FestivalHeading"; // Import FestivalHeading
+import FestivalHeading from "@/components/FestivalHeading";
 
 export default function Home() {
+  const featureSection1Ref = useRef<HTMLDivElement>(null);
+  const featureSection2Ref = useRef<HTMLDivElement>(null);
+
+  const scrollToFeatureSection1 = () => {
+    featureSection1Ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollToFeatureSection2 = () => {
+    featureSection2Ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className="min-h-screen">
-      {/* Hero Section Background and Styling */}
       <div
         className="max-w-screen-xl mx-auto px-6"
         style={{
@@ -23,20 +35,22 @@ export default function Home() {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <Navbar />
+        <Navbar
+          onStartHereClick={scrollToFeatureSection1}
+          onHowItWorksClick={scrollToFeatureSection2}
+        />
         <HeroSection />
       </div>
 
-      {/* Feature Section 1 */}
-      <FeatureSection1 />
+      <div ref={featureSection1Ref}>
+        <FeatureSection1 />
+      </div>
 
-      {/* Feature Section 2 */}
-      <FeatureSection2 />
+      <div ref={featureSection2Ref}>
+        <FeatureSection2 />
+      </div>
 
-      {/* Festival Heading Section */}
       <FestivalHeading />
-
-      {/* Footer */}
       <Footer />
     </div>
   );
