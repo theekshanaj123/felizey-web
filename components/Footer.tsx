@@ -2,8 +2,9 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebookF,
-  faTwitter,
+  faXTwitter,
   faInstagram,
+  faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
 
 const Footer: React.FC = () => {
@@ -48,7 +49,7 @@ const Footer: React.FC = () => {
 
         {/* Round Divs for Social Media Links */}
         <div className="flex space-x-6">
-          <div className="w-10 h-10 bg-[#BB17A2] rounded-full hover:bg-[#D9D9D9] transition duration-200 flex justify-center items-center">
+          <div className="w-10 h-10 bg-[#562955] rounded-full hover:bg-[#BB17A2] transition duration-200 flex justify-center items-center">
             <a
               href="#"
               className="w-4 h-4 flex rounded-full text-white"
@@ -57,22 +58,31 @@ const Footer: React.FC = () => {
               <FontAwesomeIcon icon={faFacebookF} />
             </a>
           </div>
-          <div className="w-10 h-10 bg-[#BB17A2] rounded-full hover:bg-[#D9D9D9] transition duration-200 flex justify-center items-center">
+          <div className="w-10 h-10 bg-[#562955] rounded-full hover:bg-[#BB17A2] transition duration-200 flex justify-center items-center">
             <a
               href="#"
               className="w-4 h-4 flex rounded-full text-white"
               aria-label="Twitter"
             >
-              <FontAwesomeIcon icon={faTwitter} />
+              <FontAwesomeIcon icon={faXTwitter} />
             </a>
           </div>
-          <div className="w-10 h-10 bg-[#BB17A2] rounded-full hover:bg-[#D9D9D9] transition duration-200 flex justify-center items-center">
+          <div className="w-10 h-10 bg-[#562955] rounded-full hover:bg-[#BB17A2] transition duration-200 flex justify-center items-center">
             <a
               href="#"
               className="w-4 h-4 flex rounded-full text-white"
               aria-label="Instagram"
             >
               <FontAwesomeIcon icon={faInstagram} />
+            </a>
+          </div>
+          <div className="w-10 h-10 bg-[#562955] rounded-full hover:bg-[#BB17A2] transition duration-200 flex justify-center items-center">
+            <a
+              href="#"
+              className="w-4 h-4 flex rounded-full text-white"
+              aria-label="LinkedIn"
+            >
+              <FontAwesomeIcon icon={faLinkedinIn} />
             </a>
           </div>
         </div>
