@@ -10,8 +10,8 @@ export default function ResetPassword() {
   const handlePasswordReset = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
     const { error } = await supabase.auth.resetPasswordForEmail(email, {
-      // redirectTo: "http://127.0.0.1:3000/auth/update", // Ensure this URL is reachable
-      redirectTo: `${process.env.NEXT_PUBLIC_BASE_URL}/auth/update`,
+      redirectTo: "https://www.felizey.com/auth/update", // Ensure this URL is reachable
+      // redirectTo: `${process.env.NEXT_PUBLIC_BASE_URL}/auth/update`,
     });
 
     if (error) {
