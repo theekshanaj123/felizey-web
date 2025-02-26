@@ -35,7 +35,7 @@ const FeatureSection2: React.FC = () => {
         {/* Right Part - 1/3 Width (removed for mobile) */}
         <div className="hidden md:block w-1/3 h-full relative">
           <img
-            src="/assets/Device13PMF.png"
+            src="https://votcesciwpymmsijdcvm.supabase.co/storage/v1/object/public/new/offical/Device13PMF.webp"
             alt="iPhone"
             className="absolute bottom-0 left-0 w-auto h-auto max-h-full"
           />
@@ -89,7 +89,7 @@ const FeatureSection2: React.FC = () => {
         {/* Left Part - 1/3 Width (removed for mobile) */}
         <div className="w-full md:w-1/3 h-full relative flex justify-end">
           <img
-            src="/assets/Device13PMS.png"
+            src="https://votcesciwpymmsijdcvm.supabase.co/storage/v1/object/public/new/offical/Device13PMS.webp"
             alt="iPhone"
             className="absolute bottom-0 right-0 w-auto h-auto max-h-full"
           />

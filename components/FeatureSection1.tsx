@@ -9,7 +9,7 @@ const anton = Anton({
 
 const FeatureSection1: React.FC = () => {
   return (
-    <section className="bg-[#161221] py-16 px-6 flex justify-center items-center min-h-screen">
+    <section className="bg-[#161221] py-20 px-6 flex justify-center items-center">
       <div className="max-w-screen-xl mx-auto flex flex-col items-center space-y-12">
         {/* Top Section with 'Your Next Festival Adventure' and 'Start Here >>' in one line */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-6 text-center sm:text-left">
@@ -47,12 +47,11 @@ const FeatureSection1: React.FC = () => {
         <div className="flex flex-col sm:flex-row sm:justify-between items-center sm:space-x-6 w-full">
           {/* Screenshot Image */}
           <div className="flex-shrink-0 mb-8 sm:mb-0">
-            <Image
-              src="/assets/Device13PM.png"
+            <img
+              src="https://votcesciwpymmsijdcvm.supabase.co/storage/v1/object/public/new/offical/Device13PM.webp"
               alt="Mobile showing the Felizey app"
-              layout="intrinsic"
-              width={350}
-              height={200}
+              width="350"
+              height="200"
               className="object-contain"
             />
           </div>

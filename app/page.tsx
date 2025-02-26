@@ -21,14 +21,14 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen">
+    <div>
       <div
         className="max-w-screen-xl mx-auto px-6"
         style={{
           backgroundImage: `
             linear-gradient(to bottom, rgba(22, 18, 33, 0.1), #161221), 
             linear-gradient(to right, #161221, rgba(22, 18, 33, 0.3) 20%, rgba(22, 18, 33, 0.3) 80%, #161221), 
-            url('/assets/Herobg.jpg')
+            url('https://votcesciwpymmsijdcvm.supabase.co/storage/v1/object/public/new/offical/Herobg-min.jpg')
           `,
           backgroundPosition: "center bottom",
           backgroundSize: "cover",
