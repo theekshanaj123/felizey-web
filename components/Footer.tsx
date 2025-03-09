@@ -12,12 +12,16 @@ const Footer: React.FC = () => {
     <footer className="bg-[#161221] py-12 px-6">
       <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
         {/* Logo and Tagline */}
-<div className="flex flex-col items-center md:items-start space-y-2">
-    {/* Logo Placeholder */}
-    <div className="flex items-center space-x-2">
-        <img src="../assets/felizey full logo with text.png" alt="Felizey Logo" className="w-40 h-20" />
-    </div>
-</div>
+        <div className="flex flex-col items-center md:items-start space-y-2">
+          {/* Logo Placeholder */}
+          <div className="flex items-center space-x-2">
+            <img
+              src="../assets/felizey full logo with text.png"
+              alt="Felizey Logo"
+              className="w-40 h-20"
+            />
+          </div>
+        </div>
 
         {/* Navigation Links */}
         <div className="flex flex-wrap justify-center md:justify-end gap-6">
@@ -44,6 +48,12 @@ const Footer: React.FC = () => {
             className="text-[#D9D9D9] hover:text-[#BB17A2] transition duration-200"
           >
             Privacy Policy
+          </a>
+          <a
+            href={`payment/checkout?amount=${30}`}
+            className="text-[#D9D9D9] hover:text-[#BB17A2] transition duration-200"
+          >
+            Payment
           </a>
         </div>
 
