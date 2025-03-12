@@ -1,0 +1,15 @@
+[
+    {
+        "relation": [
+            "delegate_permission/common.handle_all_urls",
+            "delegate_permission/common.get_login_creds"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "com.felizey",
+            "sha256_cert_fingerprints": [
+                "18:8B:73:B0:0C:32:19:B0:3B:9C:9F:5D:74:42:E7:2C:D4:68:02:96:51:4B:33:A7:E0:20:DF:6B:AF:4C:FE:B5"
+            ]
+        }
+    }
+]
