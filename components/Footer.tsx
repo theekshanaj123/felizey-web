@@ -49,12 +49,12 @@ const Footer: React.FC = () => {
           >
             Privacy Policy
           </a>
-          <a
+          {/* <a
             href={`payment/checkout?amount=${30}`}
             className="text-[#D9D9D9] hover:text-[#BB17A2] transition duration-200"
           >
             Payment
-          </a>
+          </a> */}
         </div>
 
         {/* Round Divs for Social Media Links */}
