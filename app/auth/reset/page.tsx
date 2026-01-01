@@ -1,7 +1,14 @@
 "use client"; // Add this line
 
 import React, { useState } from "react";
-import { supabase } from "@/supabaseClient";
+import { createClient } from "@supabase/supabase-js";
+
+// Create supabase client on the client side only
+const getSupabase = () => {
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || "";
+  const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "";
+  return createClient(supabaseUrl, supabaseKey);
+};
 
 export default function ResetPassword() {
   const [email, setEmail] = useState("");
@@ -9,6 +16,7 @@ export default function ResetPassword() {
 
   const handlePasswordReset = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
+    const supabase = getSupabase();
     const { error } = await supabase.auth.resetPasswordForEmail(email, {
       // redirectTo: "https://www.felizey.com/auth/update", // Ensure this URL is reachable
       redirectTo: `${process.env.NEXT_PUBLIC_BASE_URL}/auth/update`,

@@ -1,8 +1,15 @@
 "use client"; // Add this to mark it as a client component
 
 import React, { useState } from "react";
-import { supabase } from "@/supabaseClient";
+import { createClient } from "@supabase/supabase-js";
 import { useRouter } from "next/navigation"; // Updated import
+
+// Create supabase client on the client side only
+const getSupabase = () => {
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || "";
+  const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "";
+  return createClient(supabaseUrl, supabaseKey);
+};
 
 export default function UpdatePassword() {
   const [newPassword, setNewPassword] = useState("");
@@ -49,6 +56,7 @@ export default function UpdatePassword() {
       return;
     }
 
+    const supabase = getSupabase();
     const { error } = await supabase.auth.updateUser({
       password: newPassword,
     });
